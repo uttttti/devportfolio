@@ -5,6 +5,7 @@ var sass = require('gulp-sass');
 var wait = require('gulp-wait');
 var rename = require('gulp-rename');
 var autoprefixer = require('gulp-autoprefixer');
+var browserSync =require('browser-sync');
 
 gulp.task('scripts', function() {
     return gulp.src('js/scripts.js')
@@ -30,7 +31,28 @@ gulp.task('styles', function () {
         .pipe(gulp.dest('./css'));
 });
 
-gulp.task('watch', ['scripts', 'styles'], function() {
-    gulp.watch('js/*.js', ['scripts']);
-    gulp.watch('scss/*.scss', ['styles']);
+gulp.task('browser-sync', function() {
+    browserSync({
+        server: {
+            baseDir: './',
+            index  : './index.html'
+        }
+    });
+});
+
+gulp.task('browser-reload', function () {
+    browserSync.reload();
+});
+
+gulp.task('build', ['scripts', 'styles'], function () {
+    gulp.src(['./index.html', './css/*', './images/*', './js/scripts.min.js'], { base : './'})
+    .pipe(gulp.dest('../uttttti.github.io'))
+
+});
+
+gulp.task('watch', ['scripts', 'styles', 'browser-sync'], function() {
+    gulp.watch('./*.html', ['browser-reload']);
+    gulp.watch('./images/*', ['browser-reload']);
+    gulp.watch('./js/*.js', ['scripts', 'browser-reload']);
+    gulp.watch('./scss/*.scss', ['styles', 'browser-reload']);
 });
