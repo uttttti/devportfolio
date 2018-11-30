@@ -789,6 +789,7 @@ footer {
         margin: 0 auto;
         padding: 0;
         max-width: 800px;
+        clear: both;
     }
 
     li {
@@ -800,6 +801,41 @@ footer {
         list-style: none;
         cursor: default;
         font-size: 1.2em;
+    }
+
+    dl {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        max-width: 600px;
+        margin: 0 auto 20px;
+        padding: 0;
+
+        * {
+            margin: 7px 0;
+        }
+
+        dt {
+            width: 20%;
+            padding: 5px 10px;
+            background: darken($background-alt, 5%);
+            font-size: 1.2em;
+        }
+
+        dd {
+            width: 30%;
+            box-sizing: border-box;
+            font-size: 1.6em;
+
+        }
+        i {
+            padding: 2px;
+            color: darken($background-alt, 5%);
+            &.on {
+                color: $base-color;
+            }
+        }
+
     }
 }
 
@@ -1057,6 +1093,20 @@ footer {
 
     .social {
         text-align: center;
+    }
+
+}
+
+@media only screen and (max-width : 580px) {
+    #skills {
+        dl {
+            dt {
+                width: 40%;
+            }
+            dd {
+                width: 60%;
+            }
+        }
     }
 
 }
