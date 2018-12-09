@@ -45,7 +45,7 @@ gulp.task('browser-reload', function () {
 });
 
 gulp.task('build', ['scripts', 'styles'], function () {
-    gulp.src(['./index.html', './css/*', './images/*', './js/scripts.min.js'], { base : './'})
+    gulp.src(['./index.html', './css/*', './images/*', './js/scripts.min.js', './README.pdf'], { base : './'})
     .pipe(gulp.dest('../uttttti.github.io'))
 
 });
