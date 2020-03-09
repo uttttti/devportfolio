@@ -108,7 +108,7 @@ Webディレクターやチームリーダー経験の方が長いですが、�
 | SCSS | ★★★★☆ |
 | Git | ★★★★☆ |
 
-`Vuex` `Vuetify` `Angular Material` `Backbone.js` `Stylus` `EJS` `Jade` `npm-scripts` `gulp` `Github` `Bitbucket` `Ionic` `jQuery` `ActionScript` `smarty` `twig` `Illustrator` `Photoshop` `Sketch` `InVision` `Agile` `Google Analytics` `Google Optimize` 
+`Vuex` `Vuetify` `Angular Material` `Backbone.js` `Stylus` `EJS` `Jade` `npm-scripts` `gulp` `webpack` `Babel` `Github` `Bitbucket` `Ionic` `jQuery` `ActionScript` `smarty` `twig` `Illustrator` `Photoshop` `Sketch` `InVision` `Agile` `Google Analytics` `Google Optimize` 
 
 ## Get in Touch
 
