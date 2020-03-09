@@ -9,6 +9,15 @@ Webディレクターやチームリーダー経験の方が長いですが、�
 
 ## Experience
 
+-  2019/2 – 2019/3 
+
+    | 株式会社三越伊勢丹システム・ソリューションズ |  
+    | ----- |
+    | フロントエンドエンジニア |
+    | 派遣社員で、昨年まではVue+Vuex+VuetifyでB2CのWebサービスを、今年からAngular+Angular MaterialでB2BのWebサービスを開発しています。フロントエンドエンジニアとしてだけでなく、簡単なUIパーツをデザインしたり、画面のレイアウトを調整したりなど、少しだけWebデザイナーの領域のお手伝いもしています。 | 
+
+
+
 -  2011/5 – 2018/9 
 
     | 株式会社mediba |  
@@ -58,6 +67,11 @@ Webディレクターやチームリーダー経験の方が長いですが、�
 
 ## Projects
 
+### Webアプリケーション
+
+店頭の販売員が接客時に使ったり、商品情報や接客情報や在庫管理などに使うB2BのWebアプリケーションを開発しています。プロジェクトメンバーは８名で1週間Sprintでアジャイル開発をしています。フロントエンドが自分だけなので、Anglarの設計思想や保守性なども意識して実装するように配慮しています。POとデザインの観点や実装方法を踏まえた開発工数などを相談しながら進めたり、api側のIFの定義を調整したりしながら、チームで開発に取り組んでいます。
+
+`JIRA` `Bitbucket` `Confluence` `Slack` `npm scripts` `Angular` `AnglarMaterial` `Agile` 
 ### ポータルサイト
 
 ニュースをメインに、占いや天気、ポイントサービスなどを提供している大手キャリアのポータルサイトのスマホ版のフロントエンドの実装を担当していました。プロジェクトメンバーは30人くらいで、5〜6人ごとでスクラムを組み、2週間ごとのスプリントでアジャイル開発をしていました。ユーザー数が4,000万人以上の大規模メディアなので、制約や検証など厳しい環境でありながらも、フレキシブルな対応が求められたりと、さまざまなプレッシャーと戦いながらプロジェクトメンバーが一体となって取り組んでいました。
@@ -88,14 +102,13 @@ Webディレクターやチームリーダー経験の方が長いですが、�
 | CSS | ★★★★☆ |
 | JavaScript | ★★★☆☆ |
 | React.js | ★☆☆☆☆ |
-| Angular | ★☆☆☆☆ |
-| Vue.js | ★☆☆☆☆ |
-| TypeScript | ★☆☆☆☆ |
+| Angular | ★★★☆☆ |
+| Vue.js | ★★★☆☆ |
+| TypeScript | ★★☆☆☆ |
 | SCSS | ★★★★☆ |
-| Git | ★★★☆☆ |
-| gulp | ★★★☆☆ |
+| Git | ★★★★☆ |
 
-`Backbone.js` `Stylus` `EJS` `Jade` `npm-scripts` `Github` `Ionic` `jQuery` `ActionScript` `smarty` `twig` `Illustrator` `Photoshop` `Sketch` `InVision` `Agile` `Google Analytics` `Google Optimize` 
+`Vuex` `Vuetify` `Angular Material` `Backbone.js` `Stylus` `EJS` `Jade` `npm-scripts` `gulp` `Github` `Bitbucket` `Ionic` `jQuery` `ActionScript` `smarty` `twig` `Illustrator` `Photoshop` `Sketch` `InVision` `Agile` `Google Analytics` `Google Optimize` 
 
 ## Get in Touch
 
