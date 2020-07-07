@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios, { AxiosResponse } from 'axios';
-import './App.css';
+import Menu from './Menu/Menu';
+import './App.scss';
 
 interface Book {
   id: string;
@@ -18,12 +19,16 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div className="app">
+    <div className="app" data-testid="App">
+      <Menu />
       {books.map((book: Book) => (
         <div key={book.id} className='book-item'>
           <div className='book-id'>{book.id}</div>
           <div className='book-name'>{book.name}</div>
           <div className='book-locations'>{book.locations.join(', ')}</div>
+          <p className="content-box"> 
+            contentBox
+          </p>
         </div>
       ))}
     </div>

@@ -1,14 +1,14 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import App from './App';
+import Menu from './Menu';
 
-describe('<App />', () => {
+describe('<Menu />', () => {
   test('it should mount', () => {
-    render(<App />);
+    render(<Menu />);
     
-    const app = screen.getByTestId('App');
+    const menu = screen.getByTestId('Menu');
 
-    expect(app).toBeInTheDocument();
+    expect(menu).toBeInTheDocument();
   });
 });
