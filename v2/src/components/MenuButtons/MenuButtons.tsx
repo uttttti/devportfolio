@@ -1,21 +1,30 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
-import ButtonGroup, { ButtonGroupProps } from '@material-ui/core/ButtonGroup';
 import './MenuButtons.scss';
+import List from '@material-ui/core/List';
+import ListItem, { ListItemProps } from '@material-ui/core/ListItem';
 
-type ButtonsProps = ButtonGroupProps;
+type MenuButtonsProps = {
+  orientation: 'vertical' | 'horizonal'
+}
 
-const MenuButtons: React.FC<ButtonGroupProps> = ({orientation}: ButtonsProps) => (
-  <div className="MenuButtons" data-testid="MenuButtons">
-    <ButtonGroup
-      aria-label="menu"
-      orientation={orientation}
-    >
-      {['About', 'Experience', 'Education', 'Projects', 'Skills', 'Contact'].map(content => (
-        <Button key={content} aria-label={content} href={`#${content}`}>{content}</Button>
-      ))}
-    </ButtonGroup>
-  </div>
-);
+const MenuButtons: React.FC<MenuButtonsProps> = ({orientation}: MenuButtonsProps) => {
+
+  const ListItemLink = (props: ListItemProps<'a', { button?: true }>) => {
+    return <ListItem button component="a" {...props} />;
+  }
+
+  return (
+    <div className="MenuButtons" data-testid="MenuButtons">
+      <List
+        aria-label="menu"
+        className={orientation}
+      >
+        {['About', 'Experience', 'Education', 'Projects', 'Skills', 'Contact'].map(content => (
+          <ListItemLink button key={content} aria-label={content} href={`#${content}`}>{content}</ListItemLink>
+        ))}
+      </List>
+    </div>
+  )
+};
 
 export default MenuButtons;
