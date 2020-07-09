@@ -7,6 +7,13 @@
   flex-direction: column;
   .outline {
     text-align: center;
+    margin: 8px 0;
     color:#F3E5F5; // TODO: color定義まとめる
+    h1, h6 {
+      font-family: "Poiret One", sans-serif !important;
+    }
   }
+}
+.MuiButton-label {
+  font-family: "Poiret One", sans-serif !important;
 }

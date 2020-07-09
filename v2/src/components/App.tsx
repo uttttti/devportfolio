@@ -3,8 +3,10 @@ import axios, { AxiosResponse } from 'axios';
 import Menu from './Menu/Menu';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import { CssBaseline } from '@material-ui/core';
-import './App.scss';
 import Jumbotron from './Jumbotron/Jumbotron';
+import 'fontsource-poiret-one'
+import 'fontsource-m-plus-1p'
+import './App.scss';
 
 const theme = createMuiTheme({
   palette: {

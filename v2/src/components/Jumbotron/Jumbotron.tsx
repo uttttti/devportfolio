@@ -22,7 +22,7 @@ const Jumbotron: React.FC = () => {
       <Avatar alt="Miyoko Hirao" src="/static/image/avator.jpg" className={classes.large}/>
       <dl className="outline">
         <dt><Typography variant="h4" component="h1">MIYOKO HIRAO</Typography></dt> 
-        <dd><Typography variant="subtitle1">Frontend Engineer || Web Director</Typography></dd>
+        <dd><Typography variant="h6">Frontend Engineer && Web Director</Typography></dd>
       </dl>
       <Button variant="outlined" size="large" color="secondary">Download PDF</Button>
     </div>
