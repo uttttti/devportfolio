@@ -1,0 +1,12 @@
+.Jumbotron {
+  width: 100vw;
+  height: calc(100vw * 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  .outline {
+    text-align: center;
+    color:#F3E5F5; // TODO: color定義まとめる
+  }
+}

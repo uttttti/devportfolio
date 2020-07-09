@@ -4,6 +4,7 @@ import Menu from './Menu/Menu';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import { CssBaseline } from '@material-ui/core';
 import './App.scss';
+import Jumbotron from './Jumbotron/Jumbotron';
 
 const theme = createMuiTheme({
   palette: {
@@ -42,6 +43,7 @@ const App: React.FC = () => {
         <div className="app" data-testid="App">
           <div className="bg-img"></div>
           <Menu />
+          <Jumbotron />
           {books.map((book: Book) => (
             <div key={book.id} className='book-item'>
               <div className='book-id'>{book.id}</div>
