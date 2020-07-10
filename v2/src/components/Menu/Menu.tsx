@@ -1,4 +1,6 @@
-import React, {useState} from 'react';
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { selectDrawer, changeDrawer, drawerState } from '../../features/drawerSlice';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Slide from '@material-ui/core/Slide';
@@ -6,15 +8,15 @@ import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import Fab from '@material-ui/core/Fab';
+import MenuButtons from '../MenuButtons/MenuButtons';
+import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
-
 // drawerがStrictModeだとfindDOMNodeのエラーを吐くのでunstable_createMuiStrictModeThemeで回避
 import { unstable_createMuiStrictModeTheme, ThemeProvider} from '@material-ui/core/styles';
-import MenuButtons from '../MenuButtons/MenuButtons';
 
-import IconButton from '@material-ui/core/IconButton';
 import './Menu.scss';
+
 const Menu: React.FC = () => {
   const theme = unstable_createMuiStrictModeTheme({
     palette: {
@@ -34,9 +36,10 @@ const Menu: React.FC = () => {
   const isXS = useMediaQuery(theme.breakpoints.down('xs'));
   const isIOS = typeof window !== "undefined" && /iPad|iPhone|iPod/.test(navigator.userAgent);
   const trigger = useScrollTrigger();
-  const [isOpen, setIsOpen] = useState(false);
+  const isOpen = useSelector(selectDrawer);
+  const dispatch = useDispatch();
 
-  const toggleDrawer = (open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
+  const toggleDrawer = (isOpen: drawerState['value']) => (event: React.KeyboardEvent | React.MouseEvent) => {
     if (
       event &&
       event.type === 'keydown' &&
@@ -45,7 +48,7 @@ const Menu: React.FC = () => {
     ) {
       return;
     }
-    setIsOpen(open)
+    dispatch(changeDrawer(isOpen))
   }
 
   return (

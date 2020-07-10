@@ -1,10 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
-import activateMenuReducer from '../features/activateMenuSlice';
 import { useSelector as rawUseSelector, TypedUseSelectorHook } from 'react-redux';
+import drawerSliceReducer from '../features/drawerSlice';
 
 const store = configureStore({
   reducer: {
-    activate: activateMenuReducer,
+    isOpen: drawerSliceReducer
   }
 });
 export default store
