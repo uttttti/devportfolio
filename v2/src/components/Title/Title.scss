@@ -1,0 +1,17 @@
+.Title {
+  h2 {
+    font-family: "Poiret One", sans-serif !important;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: '';
+      height: 1px;
+      width: 50px;
+      top: 100%;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      background: #b87db4;
+    }
+  }
+}

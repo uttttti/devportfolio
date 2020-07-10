@@ -4,6 +4,8 @@ import Menu from './Menu/Menu';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import { CssBaseline } from '@material-ui/core';
 import Jumbotron from './Jumbotron/Jumbotron';
+import About from './About/About';
+import Experience from './Experience/Experience';
 import 'fontsource-poiret-one'
 import 'fontsource-m-plus-1p'
 import './App.scss';
@@ -46,6 +48,8 @@ const App: React.FC = () => {
           <div className="bg-img"></div>
           <Menu />
           <Jumbotron />
+          <About />
+          <Experience />
           {books.map((book: Book) => (
             <div key={book.id} className='book-item'>
               <div className='book-id'>{book.id}</div>
