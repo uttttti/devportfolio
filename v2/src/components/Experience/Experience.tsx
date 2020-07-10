@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios, { AxiosResponse } from 'axios';
+import axios, { AxiosResponse, AxiosError } from 'axios';
 import Title from '../Title/Title';
 import Timeline from '@material-ui/lab/Timeline';
 import TimelineItem from '@material-ui/lab/TimelineItem';
@@ -11,7 +11,7 @@ import RoomIcon from '@material-ui/icons/Room';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import './Experience.scss';
-
+import { RouteComponentProps } from 'react-router-dom';
 
 interface Experience {
   id: string;
@@ -21,13 +21,18 @@ interface Experience {
   summary: string;
 }
 
-const Experience: React.FC = () => {
+const Experience: React.FC<RouteComponentProps> = (routeProps: RouteComponentProps) => {
   const [experiences, setExperiences] = useState<Experience[]>([]);
+
   useEffect(() => {
     axios.get('/api/experience')
       .then((res: AxiosResponse<Experience[]>) => setExperiences(res.data))
-      .catch(console.error); // TODO エラー処理
-  }, []);
+      .catch((err: AxiosError) => {
+        routeProps.history.push('./error')
+        throw err;
+      });
+    }, []);
+
   return (
     <div className="Experience" data-testid="Experience">
       <Title text="Experience" />

@@ -1,29 +1,4 @@
-.content-box {
-  height: 2000px;
-}
-
 body {
   font-family: "M PLUS 1p", sans-serif !important;
   font-weight: 300 !important;
-}
-
-.app {
-  .bg-img {
-    position: fixed;
-    width: 100vw;
-    height: calc(100vw * 0.75);
-    background: url(../assets/images/bg.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
-    z-index: -1;
-    filter: contrast(.75);
-    &::after {
-      content: '';
-      display: block;
-      width: 100%;
-      height: calc(100vw * 0.75);
-      background-color: rgba(#BA68C8, 0.8);
-      position: fixed;
-    }
-  }
 }

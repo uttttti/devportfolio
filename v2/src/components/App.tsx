@@ -1,68 +1,18 @@
-import React, { useEffect, useState } from 'react';
-import axios, { AxiosResponse } from 'axios';
-import Menu from './Menu/Menu';
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
-import { CssBaseline } from '@material-ui/core';
-import Jumbotron from './Jumbotron/Jumbotron';
-import About from './About/About';
-import Experience from './Experience/Experience';
+import React from 'react';
 import 'fontsource-poiret-one'
 import 'fontsource-m-plus-1p'
 import './App.scss';
+import Page from './Page/Page';
+import Error from './Error/Error';
+import { BrowserRouter, Switch, Route, RouteComponentProps } from 'react-router-dom';
 
-const theme = createMuiTheme({
-  palette: {
-    primary: {
-      main: '#BA68C8',
-      contrastText: '#F3E5F5'
-    },
-    secondary: {
-      main: '#EEE',
-      contrastText: '#BA68C8'
-    },
-    text: {
-      primary: '#453B47'
-    }
-  }
-});
-
-interface Book {
-  id: string;
-  name: string;
-  locations: string[];
-}
-
-const App: React.FC = () => {
-  const [books, setBooks] = useState<Book[]>([]);
-
-  useEffect(() => {
-    axios.get('/api/books')
-      .then((res: AxiosResponse<Book[]>) => setBooks(res.data))
-      .catch(console.error); // TODO エラー処理
-  }, []);
-
-  return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-        <div className="app" data-testid="App">
-          <div className="bg-img"></div>
-          <Menu />
-          <Jumbotron />
-          <About />
-          <Experience />
-          {books.map((book: Book) => (
-            <div key={book.id} className='book-item'>
-              <div className='book-id'>{book.id}</div>
-              <div className='book-name'>{book.name}</div>
-              <div className='book-locations'>{book.locations.join(', ')}</div>
-              <p className="content-box"> 
-                contentBox
-              </p>
-            </div>
-          ))}
-        </div>
-    </ThemeProvider>
-  );
-};
+const App: React.FC = () => (
+  <BrowserRouter>
+    <Switch>
+      <Route path="/" exact component={(routeProps: RouteComponentProps)  => <Page {...routeProps}></Page>} />
+      <Route component={Error} />
+    </Switch>
+  </BrowserRouter>
+);
 
 export default App;

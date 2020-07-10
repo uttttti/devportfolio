@@ -1,0 +1,48 @@
+.Error {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  color: white;
+  background: linear-gradient(-45deg, #D46382, #DE68C3, #BA68C8, #AC68DE, #8663D4);
+  background-size: 400% 400%;
+	animation: Gradient 5s ease infinite;
+  p {
+    margin: 0;
+    text-indent: .25em;
+  }
+  .sorry {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 4px;
+    font-size: 64px;
+    svg {
+      width: 40px;
+      height: 40px;
+    }
+    .error-icon {
+      margin: 0 4px 0 2px;
+    }
+  }
+  .message {
+    letter-spacing: 1px;
+  }
+  .back-btn {
+    margin: 42px 0;
+  }
+}
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
