@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './Experience.scss';
 import axios, { AxiosResponse, AxiosError } from 'axios';
 import Title from '../Title/Title';
 import Timeline from '@material-ui/lab/Timeline';
@@ -10,7 +11,6 @@ import TimelineDot from '@material-ui/lab/TimelineDot';
 import RoomIcon from '@material-ui/icons/Room';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
-import './Experience.scss';
 import { RouteComponentProps } from 'react-router-dom';
 
 interface Experience {
@@ -31,11 +31,11 @@ const Experience: React.FC<RouteComponentProps> = (routeProps: RouteComponentPro
         routeProps.history.push('./error')
         throw err;
       });
-    }, []);
+    }, [routeProps.history]);
 
   return (
     <div className="Experience" data-testid="Experience">
-      <Title text="Experience" />
+      <Title label="Experience" />
       <Timeline className="timeline">
         {experiences.map((experience: Experience) => (
           <TimelineItem key={experience.id}>

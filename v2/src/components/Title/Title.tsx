@@ -3,10 +3,10 @@ import { Typography } from '@material-ui/core';
 import './Title.scss';
 
 type TitleProps = {
-  text: string;
+  label: string;
 }
 
-const Title: React.FC<TitleProps> = ({text}) => (
+const Title: React.FC<TitleProps> = ({label}) => (
   <div className="Title" data-testid="Title">
     <Typography
       variant="h4"
@@ -14,7 +14,7 @@ const Title: React.FC<TitleProps> = ({text}) => (
       align="center"
       paragraph
     >
-      {text}
+      {label}
     </Typography>
   </div>
 );
