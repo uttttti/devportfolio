@@ -25,7 +25,7 @@ const Experience: React.FC<RouteComponentProps> = (routeProps: RouteComponentPro
   const [experiences, setExperiences] = useState<Experience[]>([]);
 
   useEffect(() => {
-    axios.get('/api/experience')
+    axios.get('https://my-json-server.typicode.com/uttttti/devportfolio/experience')
       .then((res: AxiosResponse<Experience[]>) => setExperiences(res.data))
       .catch((err: AxiosError) => {
         routeProps.history.push('./error')

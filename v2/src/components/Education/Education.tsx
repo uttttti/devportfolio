@@ -17,7 +17,7 @@ const Education: React.FC<RouteComponentProps> = (routeProps: RouteComponentProp
   const [educations, setEducations] = useState<Education[]>([]);
 
   useEffect(() => {
-    axios.get('/api/education')
+    axios.get('https://my-json-server.typicode.com/uttttti/devportfolio/education/')
       .then((res: AxiosResponse<Education[]>) => setEducations(res.data))
       .catch((err: AxiosError) => {
         routeProps.history.push('./error')

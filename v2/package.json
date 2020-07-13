@@ -33,11 +33,11 @@
     "typescript": "^3.7.5"
   },
   "scripts": {
-    "start": "npm run mock & react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "mock": "./node_modules/json-server/lib/cli/bin.js --watch ./mock/json-server/api.json -p 3001 -m ./mock/json-server/middleware/proxy.js"
+    "mock": "./node_modules/json-server/lib/cli/bin.js --watch ./mock/json-server/db.json -p 3001 -m ./mock/json-server/middleware/proxy.js"
   },
   "eslintConfig": {
     "extends": "react-app"
