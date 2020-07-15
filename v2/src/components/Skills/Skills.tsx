@@ -22,7 +22,7 @@ const Skills: React.FC<RouteComponentProps> = (routeProps: RouteComponentProps) 
     }, [routeProps.history]);
   
   return (
-    <div className="Skills" data-testid="Skills">
+    <div className="Skills" data-testid="Skills" id="Skills">
       <Title label="Skills" />
       <Container className="skills-wrapper">
         {skills.map((skill: string, index) => (

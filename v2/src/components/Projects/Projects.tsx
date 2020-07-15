@@ -25,7 +25,7 @@ const Projects: React.FC<RouteComponentProps> = (routeProps: RouteComponentProps
     }, [routeProps.history]);
 
   return (
-    <div className="Projects" data-testid="Projects">
+    <div className="Projects" data-testid="Projects" id="Projects">
       <Title label="Projects" />
       <Container>
         {projects.map((project: Project) => (

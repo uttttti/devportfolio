@@ -34,7 +34,7 @@ const Experience: React.FC<RouteComponentProps> = (routeProps: RouteComponentPro
     }, [routeProps.history]);
 
   return (
-    <div className="Experience" data-testid="Experience">
+    <div className="Experience" data-testid="Experience" id="Experience">
       <Title label="Experience" />
       <Timeline className="timeline">
         {experiences.map((experience: Experience) => (

@@ -5,7 +5,7 @@ import { faTwitter, faFacebook, faInstagram, faGithub } from "@fortawesome/free-
 import { IconButton, Typography } from '@material-ui/core';
 
 const Contact: React.FC = () => (
-  <div className="Contact" data-testid="Contact">
+  <div className="Contact" data-testid="Contact" id="Contact">
     <Typography variant="h5" color="secondary" className="title">Get in Touch</Typography>
     <IconButton href="https://github.com/uttttti"><FontAwesomeIcon icon={faGithub} color="#F3E5F5" size="lg"/></IconButton>
     <IconButton href="https://www.facebook.com/uttttti"><FontAwesomeIcon icon={faTwitter} color="#F3E5F5" size="lg"/></IconButton>

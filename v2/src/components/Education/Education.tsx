@@ -26,7 +26,7 @@ const Education: React.FC<RouteComponentProps> = (routeProps: RouteComponentProp
     }, [routeProps.history]);
     
   return(
-    <div className="Education" data-testid="Education" id="#Education">
+    <div className="Education" data-testid="Education" id="Education">
       <Title label="Education" />
       <Container>
         {educations.map((education: Education) => (

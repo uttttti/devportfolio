@@ -12,6 +12,7 @@ import Projects from '../Projects/Projects';
 import Skills from '../Skills/Skills';
 import Contact from '../Contact/Contact';
 import Footer from '../Footer/Footer';
+import smoothscroll from 'smoothscroll-polyfill';
 
 const theme = createMuiTheme({
   palette: {
@@ -28,6 +29,8 @@ const theme = createMuiTheme({
     }
   }
 });
+
+smoothscroll.polyfill();
 
 const Page: React.FC<RouteComponentProps> = (routeProps: RouteComponentProps) => (
   <div className="Page" data-testid="Page">

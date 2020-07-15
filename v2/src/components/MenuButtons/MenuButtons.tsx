@@ -29,7 +29,7 @@ const MenuButtons: React.FC<MenuButtonsProps> = ({orientation}: MenuButtonsProps
         className={orientation}
       >
         {['About', 'Experience', 'Education', 'Projects', 'Skills', 'Contact'].map(content => (
-          <ListItemLink key={content} aria-label={content} href={`#${content}`} onClick={ _e => updateActivateContent() }>{content}</ListItemLink>
+          <ListItemLink key={content} aria-label={content} href={`#${content}`} onClick={_e => updateActivateContent()}>{content}</ListItemLink>
         ))}
       </List>
     </div>
