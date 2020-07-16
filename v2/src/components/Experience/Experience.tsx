@@ -11,7 +11,6 @@ import TimelineDot from '@material-ui/lab/TimelineDot';
 import RoomIcon from '@material-ui/icons/Room';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
-import { RouteComponentProps } from 'react-router-dom';
 
 interface Experience {
   id: string;
@@ -21,17 +20,17 @@ interface Experience {
   summary: string;
 }
 
-const Experience: React.FC<RouteComponentProps> = (routeProps: RouteComponentProps) => {
+const Experience: React.FC = () => {
   const [experiences, setExperiences] = useState<Experience[]>([]);
-
   useEffect(() => {
     axios.get('https://my-json-server.typicode.com/uttttti/uttttti.github.io/experience')
       .then((res: AxiosResponse<Experience[]>) => setExperiences(res.data))
       .catch((err: AxiosError) => {
-        routeProps.history.push('./error')
-        throw err;
+        setExperiences(()=>{
+          throw err;
+        })
       });
-    }, [routeProps.history]);
+    }, []);
 
   return (
     <div className="Experience" data-testid="Experience" id="Experience">

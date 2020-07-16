@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import './Education.scss';
-import { RouteComponentProps } from 'react-router-dom';
 import { Paper, Typography, Container } from '@material-ui/core';
 import axios, { AxiosResponse, AxiosError } from 'axios';
 import Title from '../Title/Title';
@@ -13,17 +12,18 @@ interface Education {
   summary: string;
 }
 
-const Education: React.FC<RouteComponentProps> = (routeProps: RouteComponentProps) => {
+const Education: React.FC = () => {
   const [educations, setEducations] = useState<Education[]>([]);
 
   useEffect(() => {
-    axios.get('https://my-json-server.typicode.com/uttttti/uttttti.github.io/education/')
+    axios.get('https://my-json-server.typicode.com/uttttti/uttttti.github.io/education')
       .then((res: AxiosResponse<Education[]>) => setEducations(res.data))
       .catch((err: AxiosError) => {
-        routeProps.history.push('./error')
-        throw err;
+        setEducations(() => {
+          throw err;
+        })
       });
-    }, [routeProps.history]);
+    }, []);
     
   return(
     <div className="Education" data-testid="Education" id="Education">

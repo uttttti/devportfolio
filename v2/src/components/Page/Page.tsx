@@ -13,6 +13,7 @@ import Skills from '../Skills/Skills';
 import Contact from '../Contact/Contact';
 import Footer from '../Footer/Footer';
 import smoothscroll from 'smoothscroll-polyfill';
+import ErrorBoundary from '../ErrorBoundary/ErrorBoundary';
 
 const theme = createMuiTheme({
   palette: {
@@ -32,7 +33,7 @@ const theme = createMuiTheme({
 
 smoothscroll.polyfill();
 
-const Page: React.FC<RouteComponentProps> = (routeProps: RouteComponentProps) => (
+const Page: React.FC<RouteComponentProps> = () => (
   <div className="Page" data-testid="Page">
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -41,10 +42,10 @@ const Page: React.FC<RouteComponentProps> = (routeProps: RouteComponentProps) =>
           <Menu />
           <Jumbotron />
           <About />
-          <Experience { ...routeProps }/>
-          <Education { ...routeProps }/>
-          <Projects { ...routeProps }/>
-          <Skills { ...routeProps }/>
+          <ErrorBoundary>{() => <Experience />}</ErrorBoundary>
+          <ErrorBoundary>{() => <Education />}</ErrorBoundary>
+          <ErrorBoundary>{() => <Projects />}</ErrorBoundary>
+          <ErrorBoundary>{()=> <Skills />}</ErrorBoundary>
           <Contact />
           <Footer />
         </div>
