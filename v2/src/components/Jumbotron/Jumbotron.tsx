@@ -26,7 +26,7 @@ const Jumbotron: React.FC = () => {
         <dt><Typography variant="h4" component="h1">MIYOKO HIRAO</Typography></dt> 
         <dd><Typography variant="h6">Frontend Engineer && Web Director</Typography></dd>
       </dl>
-      <Button variant="outlined" size="large" color="secondary">Download PDF</Button>
+      <Button variant="outlined" size="small" color="secondary" href="./resume.pdf" download>Download PDF</Button>
     </div>
   );  
 }
