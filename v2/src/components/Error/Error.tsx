@@ -5,7 +5,12 @@ import { Face as FaceIcon, ErrorOutline as ErrorOutlineIcon} from '@material-ui/
 
 const Error: React.FC = () => (
   <div className="Error" data-testid="Error">
-    <Container>
+    <div className="background">
+      <span className="bg1"></span>
+      <span className="bg2"></span>
+      <span className="bg3"></span>
+    </div>
+    <Container className="contents">
       <p className="sorry">
         S<FaceIcon /><ErrorOutlineIcon className="error-icon"/>RRY.
       </p>
