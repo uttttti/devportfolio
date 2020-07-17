@@ -1,7 +1,9 @@
+@import '../../assets/scss/common.scss';
+
 .ErrorBoundary {
   padding: 24px 0;
   .message {
-    font-family: "Poiret One", sans-serif !important;
+    @include font-en();
   }
   .ditails {
     font-size: 12px;

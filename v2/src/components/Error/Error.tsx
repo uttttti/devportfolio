@@ -11,7 +11,7 @@ const Error: React.FC = () => (
       </p>
       <Typography variant="body2" className="message">Something went wrong.</Typography>
     </Container>
-    <Button variant="outlined" href="/" className="back-btn">Go Back</Button>
+    <Button variant="outlined" color="secondary" href="/" className="back-btn">Go Back</Button>
   </div>
 );
 

@@ -6,20 +6,14 @@
   .box {
     padding: 24px 16px;
   }
-  h6 {
-    font-family: "M PLUS 1p", sans-serif !important;
-    line-height: 36px;
-  }
   h3 {
-    line-height: 1.4;
-    font-family: "M PLUS 1p", sans-serif !important;
     font-weight: bold;
   }
   .body {
     margin-top: 16px;
   }
 }
-
+// タイムラインの左側の余白を消す
 .MuiTimelineItem-missingOppositeContent:before {
   display: none;
 }

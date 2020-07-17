@@ -11,6 +11,7 @@ import TimelineDot from '@material-ui/lab/TimelineDot';
 import RoomIcon from '@material-ui/icons/Room';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
+import { API_BASE_URL } from '../../constant';
 
 interface Experience {
   id: string;
@@ -23,7 +24,7 @@ interface Experience {
 const Experience: React.FC = () => {
   const [experiences, setExperiences] = useState<Experience[]>([]);
   useEffect(() => {
-    axios.get('https://my-json-server.typicode.com/uttttti/uttttti.github.io/experience')
+    axios.get(API_BASE_URL + '/experience')
       .then((res: AxiosResponse<Experience[]>) => setExperiences(res.data))
       .catch((err: AxiosError) => {
         setExperiences(()=>{

@@ -3,6 +3,7 @@ import './Projects.scss';
 import Title from '../Title/Title';
 import { Paper, Typography, Chip, Container } from '@material-ui/core';
 import axios, { AxiosResponse, AxiosError } from 'axios';
+import { API_BASE_URL } from '../../constant';
 
 interface Project {
   id: string;
@@ -15,7 +16,7 @@ const Projects: React.FC = () => {
   const [projects, setExperiences] = useState<Project[]>([]);
 
   useEffect(() => {
-    axios.get('https://my-json-server.typicode.com/uttttti/uttttti.github.io/projects')
+    axios.get(API_BASE_URL + '/projects')
       .then((res: AxiosResponse<Project[]>) => setExperiences(res.data))
       .catch((err: AxiosError) => {
         setExperiences(() => {

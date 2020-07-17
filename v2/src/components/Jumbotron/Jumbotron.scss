@@ -1,3 +1,5 @@
+@import '../../assets/scss/common.scss';
+
 .Jumbotron {
   width: 100vw;
   height: calc(100vw * 0.75);
@@ -11,12 +13,9 @@
   .outline {
     text-align: center;
     margin: 8px 0;
-    color:#F3E5F5; // TODO: color定義まとめる
+    color: $on-primary;
     h1, h6 {
-      font-family: "Poiret One", sans-serif !important;
+      @include font-en();
     }
   }
-}
-.MuiButton-label {
-  font-family: "Poiret One", sans-serif !important;
 }

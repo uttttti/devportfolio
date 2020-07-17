@@ -3,6 +3,7 @@ import './Education.scss';
 import { Paper, Typography, Container } from '@material-ui/core';
 import axios, { AxiosResponse, AxiosError } from 'axios';
 import Title from '../Title/Title';
+import { API_BASE_URL } from '../../constant';
 
 interface Education {
   id: string;
@@ -16,7 +17,7 @@ const Education: React.FC = () => {
   const [educations, setEducations] = useState<Education[]>([]);
 
   useEffect(() => {
-    axios.get('https://my-json-server.typicode.com/uttttti/uttttti.github.io/education')
+    axios.get(API_BASE_URL + '/education')
       .then((res: AxiosResponse<Education[]>) => setEducations(res.data))
       .catch((err: AxiosError) => {
         setEducations(() => {

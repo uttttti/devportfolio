@@ -1,6 +1,8 @@
+@import '../../assets/scss/common.scss';
+
 .Title {
   h2 {
-    font-family: "Poiret One", sans-serif !important;
+    @include font-en();
     position: relative;
     &::after {
       position: absolute;
@@ -11,7 +13,7 @@
       left: 0;
       right: 0;
       margin: 0 auto;
-      background: #b87db4;
+      background: $primary;
     }
   }
 }

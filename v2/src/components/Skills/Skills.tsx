@@ -3,6 +3,7 @@ import './Skills.scss';
 import Title from '../Title/Title';
 import { Chip, Container } from '@material-ui/core';
 import axios, { AxiosResponse, AxiosError } from 'axios';
+import { API_BASE_URL } from '../../constant';
 
 type Skills = {
   item: Array<string>
@@ -12,7 +13,7 @@ const Skills: React.FC = () => {
   const [skills, setSkills] = useState<Skills["item"]>([]);
 
   useEffect(() => {
-    axios.get('https://my-json-server.typicode.com/uttttti/uttttti.github.io/skills')
+    axios.get(API_BASE_URL + '/skills')
       .then((res: AxiosResponse<Skills>) => setSkills(res.data.item))
       .catch((err: AxiosError) => {
         setSkills(()=>{
