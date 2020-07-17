@@ -2,14 +2,14 @@
 
 ## About Me
 
-##### Frontend Engineer || Web Director
+##### Frontend Engineer && Web Director
 
 Webディレクターやチームリーダー経験の方が長いですが、現在はフロントエンドエンジニア歴約4年です。ほぼ独学、かつトライ&エラーで乗り切ってきたので、知識も経験も最前線にいるわけではない自覚はありますが、どんな環境であっても意欲的に取り組む所存です。
 
 
 ## Experience
 
--  2019/2 – 2019/3 
+-  2019/2 – 2019/6 
 
     | 株式会社三越伊勢丹システム・ソリューションズ |  
     | ----- |
@@ -71,24 +71,25 @@ Webディレクターやチームリーダー経験の方が長いですが、�
 
 店頭の販売員が接客時に使ったり、商品情報や接客情報や在庫管理などに使うB2BのWebアプリケーションを開発しています。プロジェクトメンバーは８名で1週間Sprintでアジャイル開発をしています。フロントエンドが自分だけなので、Anglarの設計思想や保守性なども意識して実装するように配慮しています。POとデザインの観点や実装方法を踏まえた開発工数などを相談しながら進めたり、api側のIFの定義を調整したりしながら、チームで開発に取り組んでいます。
 
-`JIRA` `Bitbucket` `Confluence` `Slack` `npm scripts` `Angular` `AnglarMaterial` `Agile` 
+`JIRA` `Git` `Bitbucket` `Confluence` `Slack` `npm scripts` `Angular` `Anglar Material` `Agile` `XD`
+
 ### ポータルサイト
 
 ニュースをメインに、占いや天気、ポイントサービスなどを提供している大手キャリアのポータルサイトのスマホ版のフロントエンドの実装を担当していました。プロジェクトメンバーは30人くらいで、5〜6人ごとでスクラムを組み、2週間ごとのスプリントでアジャイル開発をしていました。ユーザー数が4,000万人以上の大規模メディアなので、制約や検証など厳しい環境でありながらも、フレキシブルな対応が求められたりと、さまざまなプレッシャーと戦いながらプロジェクトメンバーが一体となって取り組んでいました。
 
-`Backlog` `JIRA` `Github` `Slack` `npm scripts` `Stylus` `Backbone.js` `smarty` `twig` `InVision` `Sketch` `Agile` `Google Optimize`
+`Backlog` `JIRA` `Git` `Github` `Slack` `npm scripts` `Stylus` `Backbone.js` `smarty` `twig` `InVision` `Sketch` `Agile` `Google Optimize`
 
 ### ハイブリッドアプリ
 
 キャラクターのイラストや声優のボイスをコンテンツとして提供する自社サービスで、IonicというHTML5ハイブリッドアプリを開発できるフレームワークで実装していました。プロジェクトメンバーが7人で、ネイティブ側の実装担当と連携してフロント部分を1人で実装しました。企画が立ち上がってからリリースまでが約3ヶ月と、かなりタイトなスケジュールの中、アプリの実装経験がゼロかつ、環境整備やフレームワークも初めての状態で、学習しながら実装するのにかなり苦戦しました。
 
-`Backlog` `Github` `Talknote` `Slack` `Ionic` `Angular` `Typescript` `SCSS` `InVision` `Sketch` 
+`Backlog` `Git` `Github` `Talknote` `Slack` `Ionic` `Angular` `Typescript` `SCSS` `InVision` `Sketch` 
 
 ### SNSサービス
 
 ねこ主体のコミュニケーションに特化したSNSを自社サービスとして新規で立ち上げました。初めてフロントエンドとして担当した案件で、Vue.jsを採用して実装しました。プロジェクトメンバーは7人で、UX/UIについてもメンバー全員で議論しながら注力して作りました。
                         
-`Backlog` `JIRA` `Github` `gulp` `Stylus` `Vue.js` `InVision` `Sketch` 
+`Backlog` `JIRA` `Git` `Github` `gulp` `Stylus` `Vue.js` `InVision` `Sketch` 
 
 ###  Webプロモーション</h3>
 
@@ -96,19 +97,7 @@ Webディレクターやチームリーダー経験の方が長いですが、�
 
 ##  Skills
 
-| skill | level |
-| ---- | ---- |
-| HTML | ★★★★☆ | 
-| CSS | ★★★★☆ |
-| JavaScript | ★★★☆☆ |
-| React.js | ★☆☆☆☆ |
-| Angular | ★★★☆☆ |
-| Vue.js | ★★★☆☆ |
-| TypeScript | ★★☆☆☆ |
-| SCSS | ★★★★☆ |
-| Git | ★★★★☆ |
-
-`Vuex` `Vuetify` `Angular Material` `Backbone.js` `Stylus` `EJS` `Jade` `npm-scripts` `gulp` `webpack` `Babel` `Github` `Bitbucket` `Ionic` `jQuery` `ActionScript` `smarty` `twig` `Illustrator` `Photoshop` `Sketch` `InVision` `Agile` `Google Analytics` `Google Optimize` 
+`HTML` `CSS` `Javascript` `Typescript` `React` `Vue.js` `Angular` `Vuex` `Redux` `RxJS` `Vuetify` `Angular Material` `Material-ui` `Backbone.js` `SCSS` `Stylus` `EJS` `Jade` `npm-scripts` `gulp` `webpack` `Babel` `Github` `Bitbucket` `Ionic` `jQuery` `ActionScript` `smarty` `twig` `Illustrator` `Photoshop` `Sketch` `InVision` `Agile` `Google Analytics` `Google Optimize` 
 
 ## Get in Touch
 
@@ -119,4 +108,4 @@ Webディレクターやチームリーダー経験の方が長いですが、�
 
 --- 
 
-&copy; 2018 Miyoko Hirao
+&copy; Miyoko Hirao
