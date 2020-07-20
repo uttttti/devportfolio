@@ -12,15 +12,16 @@ import { THEME_SETTING } from '../constant'
 
 const theme = createMuiTheme(THEME_SETTING);
 smoothscroll.polyfill();
+
 const App: React.FC = () => (
   <ThemeProvider theme={theme}>
-  <CssBaseline />
-  <BrowserRouter>
-    <Switch>
-      <Route path="/" exact component={Page} />
-      <Route component={Error} />
-    </Switch>
-  </BrowserRouter>
+    <CssBaseline />
+    <BrowserRouter>
+      <Switch>
+        <Route path="/error" component={Error} />
+        <Route component={Page} />
+      </Switch>
+    </BrowserRouter>
   </ThemeProvider>
 );
 

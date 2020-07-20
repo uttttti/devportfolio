@@ -13,6 +13,7 @@ import Footer from '../Footer/Footer';
 
 import ErrorBoundary from '../ErrorBoundary/ErrorBoundary';
 import { useTheme, useMediaQuery } from '@material-ui/core';
+import Extra from '../Extra/Extra';
 
 const Page: React.FC<RouteComponentProps> = () => {
   const theme = useTheme();
@@ -30,6 +31,7 @@ const Page: React.FC<RouteComponentProps> = () => {
         <ErrorBoundary>{()=> <Skills />}</ErrorBoundary>
         <Contact />
         <Footer />
+        <Extra />
       </div>
     </div>
   );

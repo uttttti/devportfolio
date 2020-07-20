@@ -1,0 +1,13 @@
+@import '../../assets/scss/common';
+
+.Extra {
+  background-color: $background;
+  padding-bottom: 24px;
+  .btn-wrapper {
+    margin: 24px;
+    text-align: center;
+  }
+  .container {
+    margin-top: 24px;
+  }
+}

@@ -1,7 +1,9 @@
-@import '../../assets/scss/common.scss';
+@import '../../assets/scss/common';
 
 .ErrorBoundary {
-  padding: 24px 0;
+  margin: 8px 0;
+  padding: 8px 0;
+  background-color: $on-primary;
   .message {
     @include font-en();
   }
