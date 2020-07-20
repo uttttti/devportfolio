@@ -1,8 +1,11 @@
 .Skills {
-  margin-top: 24px;
+  background-color: white;
+  padding-bottom: 48px;
+  .Title {
+    background-color: white;
+  }
   .skills-wrapper {
     text-align: center;
-    margin-top: 24px;
   }
   .skill {
     margin: 4px;

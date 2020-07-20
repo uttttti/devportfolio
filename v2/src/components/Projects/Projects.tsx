@@ -28,19 +28,21 @@ const Projects: React.FC = () => {
   return (
     <div className="Projects" data-testid="Projects" id="Projects">
       <Title label="Projects" />
-      <Container>
-        {projects.map((project: Project) => (
-          <Paper key={project.id} elevation={0} variant="outlined" square className="box">
-            <Typography variant="h6" component="h3" align="center">{project.title}</Typography>
-            <Typography variant="body2" className="body">{project.summary}</Typography>
-            <div className="skill-wrapper">
-              {project.skills.map((skill: string, index) => (
-                <Chip size="small" key={skill + index} label={skill} className="skill"></Chip>
-              ))}
-            </div>
-          </Paper>
-        ))}
-      </Container>
+      <div className="wrapper">
+        <Container>
+          {projects.map((project: Project) => (
+            <Paper key={project.id} elevation={0} variant="outlined" square className="box">
+              <Typography variant="h6" component="h3" align="center">{project.title}</Typography>
+              <Typography variant="body2" className="body">{project.summary}</Typography>
+              <div className="skill-wrapper">
+                {project.skills.map((skill: string, index) => (
+                  <Chip size="small" color="secondary" key={skill + index} label={skill} className="skill"></Chip>
+                ))}
+              </div>
+            </Paper>
+          ))}
+        </Container>
+      </div>
     </div>
 );
 }

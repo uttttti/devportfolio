@@ -57,7 +57,7 @@ const Menu: React.FC = () => {
         <>
           <Fab
             size="small"
-            color="secondary"
+            color="primary"
             aria-label="open drawer"
             className="fab-button"
             onClick={toggleDrawer(true)}

@@ -12,6 +12,7 @@ import RoomIcon from '@material-ui/icons/Room';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import { API_BASE_URL } from '../../constant';
+import { Container } from '@material-ui/core';
 
 interface Experience {
   id: string;
@@ -36,26 +37,30 @@ const Experience: React.FC = () => {
   return (
     <div className="Experience" data-testid="Experience" id="Experience">
       <Title label="Experience" />
-      <Timeline className="timeline">
-        {experiences.map((experience: Experience) => (
-          <TimelineItem key={experience.id}>
-          <TimelineSeparator>
-            <TimelineDot color="primary">
-              <RoomIcon />
-            </TimelineDot>
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent>
-            <Typography variant="subtitle1" color="textSecondary">{experience.date}</Typography>
-            <Paper elevation={0} variant="outlined" square className="box">
-              <Typography variant="h6" component="h3">{experience.company}</Typography>
-              <Typography variant="subtitle2" component="h4" color="textSecondary">{experience.occupation}</Typography>
-              <Typography variant="body2" className="body">{experience.summary}</Typography>
-            </Paper>
-          </TimelineContent>
-        </TimelineItem>
-        ))}
-      </Timeline>
+      <div className="wrapper">
+        <Container>
+          <Timeline className="timeline">
+            {experiences.map((experience: Experience) => (
+              <TimelineItem key={experience.id}>
+              <TimelineSeparator>
+                <TimelineDot color="primary">
+                  <RoomIcon />
+                </TimelineDot>
+                <TimelineConnector />
+              </TimelineSeparator>
+              <TimelineContent>
+                <Typography variant="subtitle1" color="textSecondary">{experience.date}</Typography>
+                <Paper elevation={0} variant="outlined" square className="box">
+                  <Typography variant="h6" component="h3">{experience.company}</Typography>
+                  <Typography variant="subtitle2" component="h4" color="textSecondary">{experience.occupation}</Typography>
+                  <Typography variant="body2" className="body">{experience.summary}</Typography>
+                </Paper>
+              </TimelineContent>
+            </TimelineItem>
+            ))}
+          </Timeline>
+        </Container>
+      </div>
     </div>
   );
 }

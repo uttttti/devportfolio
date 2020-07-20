@@ -1,8 +1,15 @@
+@import '../../assets/scss/common';
+
 .Projects {
-  padding-top: 24px;
-  .box {
-    margin: 16px 0;
+  .wrapper {
+    background-color: $background;
     padding: 24px;
+  }
+  .box {
+    padding: 24px;
+    & + .box {
+      margin-top: 16px;
+    }
   }
   .body {
     margin: 16px 0;

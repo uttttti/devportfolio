@@ -29,16 +29,18 @@ const Education: React.FC = () => {
   return(
     <div className="Education" data-testid="Education" id="Education">
       <Title label="Education" />
-      <Container>
-        {educations.map((education: Education) => (
-          <Paper key={education.id} elevation={0} variant="outlined" square className="box">
-            <Typography variant="h6" component="h3">{education.school}</Typography>
-            <Typography variant="subtitle2" component="h4" color="textSecondary">{education.department}</Typography>
-            <Typography variant="subtitle2" component="h4" color="textSecondary">{education.date}</Typography>
-            <Typography variant="body2" className="body">{education.summary}</Typography>
-          </Paper>
-        ))}
-      </Container>
+      <div className="wrapper">
+        <Container className="contents">
+          {educations.map((education: Education) => (
+            <Paper key={education.id} elevation={0} variant="outlined" square className="box">
+              <Typography variant="h6" component="h3">{education.school}</Typography>
+              <Typography variant="subtitle2" component="h4" color="textSecondary">{education.department}</Typography>
+              <Typography variant="subtitle2" component="h4" color="textSecondary">{education.date}</Typography>
+              <Typography variant="body2" className="body">{education.summary}</Typography>
+            </Paper>
+          ))}
+        </Container>
+      </div>
     </div>
   );
 }

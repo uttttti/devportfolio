@@ -5,8 +5,8 @@ export const THEME_SETTING = {
       contrastText: '#F3E5F5'
     },
     secondary: {
-      main: '#EEE',
-      contrastText: '#BA68C8'
+      main: '#F3E5F5',
+      contrastText: '#894D94'
     },
     text: {
       primary: '#453B47'

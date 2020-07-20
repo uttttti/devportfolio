@@ -1,7 +1,7 @@
 import React from 'react';
 import './Jumbotron.scss';
-import { Avatar, makeStyles, createStyles, Theme, Button, Typography } from '@material-ui/core';
-import Alert from '@material-ui/lab/Alert';
+import { Avatar, makeStyles, createStyles, Theme, Button, Typography, useTheme } from '@material-ui/core';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -18,9 +18,10 @@ const useStyles = makeStyles((theme: Theme) =>
 
 const Jumbotron: React.FC = () => {
   const classes = useStyles();
+  const theme = useTheme();
+  const isXS = useMediaQuery(theme.breakpoints.down('xs'));
   return(
-    <div className="Jumbotron" data-testid="Jumbotron">
-      <Alert severity="warning"　variant="filled" className="warning" color="info">まだ制作途中です。</Alert>
+    <div className={'Jumbotron ' + ( isXS? 'xs' : '')} data-testid="Jumbotron">
       <Avatar alt="Miyoko Hirao" src="/static/image/avator.jpg" className={classes.large}/>
       <dl className="outline">
         <dt><Typography variant="h4" component="h1">MIYOKO HIRAO</Typography></dt> 

@@ -2,6 +2,8 @@
 
 .Footer {
   text-align: center;
+  padding-top: 24px;
+  background-color: $background;
   footer {
     padding: 16px 0;
     @include font-en();

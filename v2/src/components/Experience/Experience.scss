@@ -1,7 +1,9 @@
+@import '../../assets/scss/common';
+
 .Experience {
-  padding: 24px 0;
-  .timeline {
-    background-color: #fafafa;
+  .wrapper {
+    background-color: $background;
+    padding: 16px 0;
   }
   .box {
     padding: 24px 16px;

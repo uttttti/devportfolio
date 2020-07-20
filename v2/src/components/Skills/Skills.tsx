@@ -27,7 +27,7 @@ const Skills: React.FC = () => {
       <Title label="Skills" />
       <Container className="skills-wrapper">
         {skills.map((skill: string, index) => (
-          <Chip key={skill + index} label={skill} className="skill"></Chip>
+          <Chip color="secondary" key={skill + index} label={skill} className="skill"></Chip>
         ))}
       </Container>
     </div>

@@ -1,15 +1,18 @@
 @import '../../assets/scss/common.scss';
 
 .Title {
+  padding: 36px 0 48px;
+  background-color: rgba($background, .3);
   h2 {
     @include font-en();
     position: relative;
+    margin-bottom: 0;
     &::after {
       position: absolute;
       content: '';
       height: 1px;
       width: 50px;
-      top: 100%;
+      top: calc(100% + 4px);
       left: 0;
       right: 0;
       margin: 0 auto;

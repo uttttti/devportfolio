@@ -1,8 +1,15 @@
+@import '../../assets/scss/common';
+
 .Education {
-  padding-top: 24px;
+  .wrapper {
+    background-color: $background;
+    padding: 24px 0;
+  }
   .box {
-    margin: 16px 0;
     padding: 24px;
+    & + .box {
+      margin-top: 16px;
+    }
   }
   .body {
     margin: 16px 0;
