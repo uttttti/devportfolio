@@ -8,7 +8,7 @@ const Footer: React.FC = () => (
     <Fab color="primary" size="small" aria-label="scroll back to top" href="#back-to-top-anchor">
       <KeyboardArrowUpIcon />
     </Fab>
-    <footer>&copy;Miyoko Hirao</footer>
+    <footer>Copyright &copy; me. All Rights Reserved.</footer>
   </div>
 );
 

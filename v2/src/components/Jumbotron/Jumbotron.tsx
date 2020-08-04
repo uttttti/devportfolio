@@ -23,10 +23,7 @@ const Jumbotron: React.FC = () => {
   return(
     <div className={'Jumbotron ' + ( isXS? 'xs' : '')} data-testid="Jumbotron">
       <Avatar alt="Miyoko Hirao" src="/static/image/avator.jpg" className={classes.large}/>
-      <dl className="outline">
-        <dt><Typography variant="h4" component="h1">MIYOKO HIRAO</Typography></dt> 
-        <dd><Typography variant="h6">Frontend Engineer && Web Director</Typography></dd>
-      </dl>
+      <Typography variant="h4" component="h1" className="outline">Frontend Engineer<span className="operator">&&</span>Web Director</Typography>
       <Button variant="outlined" size="small" color="secondary" href="./resume.pdf" download>Download PDF</Button>
     </div>
   );  

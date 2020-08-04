@@ -10,15 +10,14 @@
   &.xs {
     height: calc(100vw * 0.75);
   }
-  .warning {
-    margin: 8px 0;
-  }
   .outline {
     text-align: center;
-    margin: 8px 0;
+    margin: 8px 0 16px;
     color: $on-primary;
-    h1, h6 {
-      @include font-en();
+    .operator {
+      display: block;
+      font-size: 20px;
+      line-height: 1;
     }
   }
 }

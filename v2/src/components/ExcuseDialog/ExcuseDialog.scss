@@ -1,0 +1,12 @@
+.ExcuseDialog {}
+.dialog-title {
+  &.MuiDialogTitle-root{
+    padding-top: 0;
+  }
+  .MuiTypography-root {
+    text-align: center;
+  }
+}
+.dialog-content {
+  margin-bottom: 56px;
+}
