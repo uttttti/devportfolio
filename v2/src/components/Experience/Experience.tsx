@@ -11,7 +11,6 @@ import TimelineDot from '@material-ui/lab/TimelineDot';
 import RoomIcon from '@material-ui/icons/Room';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
-import { API_BASE_URL } from '../../constant';
 import { Container } from '@material-ui/core';
 
 interface Experience {
@@ -25,7 +24,7 @@ interface Experience {
 const Experience: React.FC = () => {
   const [experiences, setExperiences] = useState<Experience[]>([]);
   useEffect(() => {
-    axios.get(API_BASE_URL + '/experience')
+    axios.get(process.env.REACT_APP_API_ENDPOINT + '/experience')
       .then((res: AxiosResponse<Experience[]>) => setExperiences(res.data))
       .catch((err: AxiosError) => {
         setExperiences(()=>{

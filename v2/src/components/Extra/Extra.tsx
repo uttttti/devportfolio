@@ -5,7 +5,6 @@ import { Button, Slide, Container, Typography } from '@material-ui/core';
 import Error from '../Error/Error';
 import ErrorBoundary from '../ErrorBoundary/ErrorBoundary';
 import axios, { AxiosResponse, AxiosError } from 'axios';
-import { API_BASE_URL } from '../../constant';
 
 
 interface Foo {
@@ -26,7 +25,7 @@ const Extra: React.FC = () => {
   const ImpersonationApiError: React.FC = () => {
     const [fooData, setFooData] = useState<Foo[]>([]);
     useEffect(() => {
-      axios.get(API_BASE_URL + '/foo')
+      axios.get(process.env.REACT_APP_API_ENDPOINT + '/foo')
       .then((res: AxiosResponse<Foo[]>) => setFooData(res.data))
       .catch((err: AxiosError) => {
         setFooData(() => {

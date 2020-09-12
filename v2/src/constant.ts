@@ -45,5 +45,3 @@ export const THEME_SETTING = {
     }
   }
 }
-
-export const API_BASE_URL = 'https://my-json-server.typicode.com/uttttti/uttttti.github.io'
